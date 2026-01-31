@@ -1,16 +1,76 @@
-# React + Vite
+# Workflow Builder UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based visual workflow builder application that allows users to create, edit, and manage complex workflow structures through an intuitive drag-and-drop interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Core Functionality
 
-## React Compiler
+- **Visual Workflow Canvas**: Interactive canvas for building workflows with nodes and connections
+- **Node Types**: Support for multiple node types including Start, Action, Branch (Condition), and End nodes
+- **Dynamic Layout**: Automatic positioning of nodes in a tree-like structure
+- **Node Management**: Add, delete, and edit node properties (labels)
+- **Connection System**: Visual connections between nodes representing workflow flow
+- **Branching Logic**: Support for conditional branches with multiple paths (True/False)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### User Interactions
 
-## Expanding the ESLint configuration
+- **Add Nodes**: Context-sensitive menu for adding new nodes after existing ones
+- **Delete Nodes**: Remove nodes while maintaining workflow continuity
+- **Edit Labels**: Inline editing of node titles/labels
+- **Drag & Drop**: Move nodes around the canvas (position updates)
+- **Save Workflow**: Export current workflow structure to console (JSON format)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Technical Implementation
+
+- **React Hooks**: Functional components with useState, useReducer, and custom hooks
+- **State Management**: Centralized state management using useReducer for workflow mutations
+- **Modular Architecture**: Reusable components (Node, Connection, WorkflowCanvas, etc.)
+- **CSS Styling**: Custom CSS with transitions for smooth interactions
+- **No External Libraries**: Built without UI libraries or diagramming frameworks
+
+## Technology Stack
+
+- **Frontend Framework**: React 18 with functional components and hooks
+- **Build Tool**: Vite for fast development and building
+- **Language**: JavaScript (ES6+)
+- **Styling**: Pure CSS with CSS modules
+- **State Management**: React useReducer for complex state logic
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd workflow-builder-ui/frontend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+
