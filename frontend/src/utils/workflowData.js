@@ -5,7 +5,7 @@ export const initialWorkflow = {
       id: 'start',
       type: 'start',
       label: 'Start',
-      position: { x: 400, y: 50 },
+      position: { x: 50, y: 50 },
       children: []
     }
   },
