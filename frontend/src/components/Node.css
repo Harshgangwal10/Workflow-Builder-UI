@@ -1,0 +1,204 @@
+.node {
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: move;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.node:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.node.start {
+  background-color: #e8f5e8;
+  border-color: #4caf50;
+}
+
+.node.action {
+  background-color: #fff3e0;
+  border-color: #ff9800;
+}
+
+.node.branch {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.node.end {
+  background-color: #ffebee;
+  border-color: #f44336;
+}
+
+
+.node-label {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+  cursor: text;
+}
+
+
+.node-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.node-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.node-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.node-btn.delete {
+  background-color: #ffcccc;
+  color: #cc0000;
+}
+
+.node-btn.delete:hover {
+  background-color: #ffaaaa;
+}
+
+
+.node form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.node input {
+  width: 80%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+
+.connection-point {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  border: 2px solid #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.connection-point:hover {
+  background-color: #45a049;
+}
+
+.plus-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+
+
+.branch-connection-points {
+  position: absolute;
+  bottom: -45px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+
+.branch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.connection-point.true-branch,
+.connection-point.false-branch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+
+.connection-point.true-branch {
+  background-color: #4caf50;
+}
+.connection-point.true-branch:hover {
+  background-color: #45a049;
+}
+
+
+.connection-point.false-branch {
+  background-color: #f44336;
+}
+.connection-point.false-branch:hover {
+  background-color: #d32f2f;
+}
+
+
+.branch-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 6px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .branch-connection-points {
+    bottom: -35px;
+    gap: 25px;
+  }
+  .connection-point.true-branch,
+  .connection-point.false-branch {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+  .branch-label {
+    font-size: 10px;
+  }
+}
