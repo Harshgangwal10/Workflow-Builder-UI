@@ -19,6 +19,7 @@ A React-based visual workflow builder application that allows users to create, e
 - **Delete Nodes**: Remove nodes while maintaining workflow continuity
 - **Edit Labels**: Inline editing of node titles/labels
 - **Drag & Drop**: Move nodes around the canvas (position updates)
+- **Undo/Redo**: Revert or reapply changes to the workflow structure
 - **Save Workflow**: Export current workflow structure to console (JSON format)
 
 ### Technical Implementation
@@ -72,5 +73,3 @@ npm run dev
 ```bash
 npm run build
 ```
-
-
